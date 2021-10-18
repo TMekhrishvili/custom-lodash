@@ -1,0 +1,15 @@
+{
+  "name": "custom-lodash",
+  "version": "1.0.0",
+  "description": "unit testing",
+  "main": "index.js",
+  "repository": "https://github.com/TMekhrishvili/custom-lodash.git",
+  "author": "Tamar Mekhrishvili",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.3.0"
+  }
+}
