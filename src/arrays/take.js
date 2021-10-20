@@ -5,7 +5,12 @@
  * @returns {Array} Returns the slice of array.
  */
 function take(array, n = 1) {
-  return [];
+  if (n > array.length) {
+    return array;
+  } else {
+    array.length = n;
+    return array
+  }
 }
 
 module.exports = take;

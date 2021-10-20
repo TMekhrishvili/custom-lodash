@@ -4,6 +4,15 @@
  * @param {Array} array The array to compact.
  * @returns {Array} Returns the new array of filtered values.
  */
-const compact = (array) => array.filter((v) => v);
+function compact(array) {
+    let index = 0, result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]) {
+            result[index] = array[i];
+            index++;
+        }
+    }
+    return result;
+}
 
 module.exports = compact;

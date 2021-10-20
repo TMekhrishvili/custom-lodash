@@ -7,14 +7,18 @@
  * @returns {Array} Returns the new array of chunks.
  */
 
-function chunk(array, size) {
+function chunk(array, size = 1) {
   if (array.length === 0 || size === 0) return [];
   if (size === 1) return array;
-  let index = 0;
-  const result = [];
-  while (index < array.length) {
-    result.push(array.slice(index, index + size));
-    index += size;
+  let result = [], outerIndex = 0, innerArr = [];
+  for (let i = 0; i < array.length; i++) {
+    let index = i % size;
+    innerArr[index] = array[i];
+    if (index === size - 1 || i === array.length - 1) {
+      result[outerIndex] = [...innerArr];
+      innerArr.length = 0; // clearing array
+      outerIndex++;
+    }
   }
   return result;
 }
