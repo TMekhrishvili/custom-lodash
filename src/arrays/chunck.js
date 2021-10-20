@@ -9,7 +9,7 @@ const push = require("../shared/push");
  * @param {number} size The length of each chunk
  * @returns {Array} Returns the new array of chunks.
  */
-function chunk(array, size) {
+function chunk(array, size = 1) {
   let l = length(array);
   if (l === 0 || size === 0) return [];
   let result = [], outerIndex = 0, innerArr = [];

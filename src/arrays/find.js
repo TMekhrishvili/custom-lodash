@@ -1,3 +1,4 @@
+const length = require('../shared/length');
 /**
  * Iterates over elements of collection,
  * returning the first element predicate returns truthy for.
@@ -9,7 +10,9 @@
  * @returns {*} Returns the matched element, else undefined.
  */
 function find(collection, predicate, fromIndex = 0) {
-  return [];
+  for (let i = fIndex; i < length(collection); i++) {
+
+  }
 }
 
 module.exports = find;

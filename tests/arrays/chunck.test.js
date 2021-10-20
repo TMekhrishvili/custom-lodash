@@ -11,3 +11,7 @@ test('chunk empty array', () => {
 test('chunk with size=0', () => {
     expect(chunk([1, 2, 3, 4, 5], 0)).toStrictEqual([]);
 });
+
+test('chunk with default value', () => {
+    expect(chunk([1, 2, 3, 4, 5])).toStrictEqual([[1], [2], [3], [4], [5]]);
+});
