@@ -5,7 +5,6 @@
  * @returns {Array} Returns the slice of array.
  */
 function drop(array, n = 1) {
-
   const result = [];
   let index = 0;
   for (let i = n; i < array.length; i++) {

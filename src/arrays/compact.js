@@ -1,3 +1,6 @@
+const length = require("../shared/length");
+const push = require('../shared/push');
+
 /**
  * Creates an array with all falsey values removed.
  * The values false, null, 0, "", undefined, and NaN are falsey.
@@ -6,9 +9,9 @@
  */
 function compact(array) {
     let index = 0, result = [];
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < length(array); i++) {
         if (array[i]) {
-            result[index] = array[i];
+            result = push(result, array[i]);
             index++;
         }
     }

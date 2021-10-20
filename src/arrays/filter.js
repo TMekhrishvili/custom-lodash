@@ -1,3 +1,5 @@
+const push = require('../shared/push');
+
 /**
  * Iterates over elements of collection,
  * returning an array of all elements predicate returns truthy for.
@@ -7,7 +9,13 @@
  * @returns {Array} Returns the new filtered array.
  */
 function filter(collection, predicate) {
-  return [];
+  let result = [];
+  for (let i = 0; i < collection.length; i++) {
+    if (predicate(collection[i], i, collection)) {
+      result = push(result, collection[i]);
+    }
+  }
+  return result;
 }
 
 module.exports = filter;
