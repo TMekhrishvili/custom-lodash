@@ -1,4 +1,4 @@
-const chunck = require('../src/chunck');
+const chunck = require('../../src/arrays/chunck');
 
 test('array [1, 2, 3, 4, 5] is chunked into [[1, 2], [3, 4], [5]]', () => {
     expect(chunck([1, 2, 3, 4, 5], 2)).toStrictEqual([[1, 2], [3, 4], [5]]);

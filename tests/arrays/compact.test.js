@@ -1,4 +1,4 @@
-const compact = require('../src/compact');
+const compact = require('../../src/arrays/compact');
 
 test('compact array [1, false, "hello", undefined, null]', () => {
     expect(compact([1, false, 'hello', undefined, null])).toStrictEqual([1, 'hello']);
