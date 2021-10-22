@@ -9,9 +9,5 @@ test('test of "includes" function', () => {
 });
 
 test('test of "includes" function', () => {
-    expect(includes({ 'a': 1, 'b': 2 }, 1)).toStrictEqual(true);
-});
-
-test('test of "includes" function', () => {
-    expect(includes('abcd', 'bc')).toStrictEqual(true);
+    expect(includes(['a', 'b', 'c', 'd'], 'b')).toStrictEqual(true);
 });
