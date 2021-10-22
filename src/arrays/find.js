@@ -11,7 +11,7 @@ const length = require('../shared/length');
  */
 function find(collection, predicate, fromIndex = 0) {
   for (let i = fIndex; i < length(collection); i++) {
-
+    // not implemented
   }
 }
 
